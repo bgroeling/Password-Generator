@@ -55,10 +55,6 @@ const generatePassword = (length, characters) => {
       Math.floor(Math.random() * characters.length)
     );
   }
-  if (j==0)
-       {
-          alert("please select checkbox")
-       }
   return password;
 };
 
