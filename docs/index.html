@@ -27,13 +27,14 @@
         <div class="card-body">
           <textarea
             readonly
-            id="password"
+            id="#password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <button id="copy">Copy</button>
         </div>
         <!-- ------------------------------------------- -->
-        <!-- Button -->
+        <!-- Button to open settings -->
         <div class="card-footer">
           <button id="generate" class="btn">Create Password</button>
         </div>
@@ -44,7 +45,31 @@
       <div id="Settings-Modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <p>We'll put stuff here</p>
+          <!-- --------------------------- -->
+          <div id="random-password">
+            <div id="settings">
+              <!-- Start Password Settings -->
+              <label for="length">Length</label>
+              <input type="number" id="length" value="8" min="8" max="128" />   
+              
+              <label for="numbers">Numbers</label>
+              <input type="checkbox" id="numbers" checked />
+
+              <label for="symbols">Symbols</label>
+              <input type="checkbox" id="symbols" checked />
+
+              <label for="lower">Lower Case Letters</label>
+              <input type="checkbox" id="lower" checked />
+
+              <label for="upper">Upper Case Letters</label>
+              <input type="checkbox" id="upper" checked />
+              <!-- End Password Settings -->
+            </div>
+            <!-- --------------------------- -->
+            <!-- Button to generate password -->
+            <button id="#generate" class="btn">Generate Password</button>
+          </div>
+          
         </div>
       </div>
       
