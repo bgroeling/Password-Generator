@@ -1,21 +1,32 @@
 // Assignment code here
-// generator functions - https://www.net-comber.com/charset.html
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// get modal
-var modal = document.getElementById("modal");
+// -------------------------------------------------------------->
+// MODAL
 
-// get open modal button
-var modalBtn = document.getElementById("button");
-
-// get close button
-var closeBtn = document.getElementById("close");
-
-// listen for click
-modal
-
+var modal = document.getElementById("Settings-Modal");
+// button that opens the modal
+var btn = document.getElementById("generate");
+// element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// click to open modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// click x to close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// click anywhere outside of the modal to close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+// -------------------------------------------------------------->
 
 // Write password to the #password input
 function writePassword() {
@@ -23,19 +34,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-}
-// Lower Case Letters
-function getRandomLower() {
-  return String.fromCharCode(console.log(Math.floor(Math.random() * 26) +97));
-}
-// Upper Case Letters
-function getRandomUpper() {
-  return String.fromCharCode(console.log(Math.floor(Math.random() * 26) +65));
+
 }
 
-
-
-console.log(getRandomLower());
-console.log(getRandomUpper());
-
-
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
