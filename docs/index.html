@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+
     <div class="wrapper">
+      <!-- Main Title Start -->
       <header>
         <h1>Password Generator</h1>
       </header>
+      <!-- Main Title End -->
+      
+      <!-- Password Generator Start -->
       <div class="card">
+        <!-- Title -->
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <!-- ------------------------------------------- -->
+        <!-- Password -->
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +32,54 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <!-- ------------------------------------------- -->
+        <!-- Button -->
         <div class="card-footer">
+          <button id="button" class="btn">Create Password</button>
+        </div>
+        <!-- --------------------------------------------- -->
+      </div>
+      <!-- Password Generator End -->
+
+      <!-- Password Settings Start -->
+      <div id="modal" class= "settings">
+        <div class="settings-feature">
+          <!-- lowercase -->
+          <div class="setting">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">Lower Case Letters</label>
+          </div>
+          <!-- uppercase -->
+          <div class="setting">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="uppercase" input type="checkbox" id="uppercase" checked>Upper Case Letters</label>
+          </div>
+          <!-- number -->
+          <div class="setting">
+            <input type="checkbox" id="numbers" checked />
+            <label for="numbers">Numbers</label>
+          </div>
+          <!-- special symbols -->
+          <div class="setting">
+            <input type="checkbox" id="symbols" checked />
+            <label for="symbols">Symbols</label>
+          </div>
+          <br>
+          <!-- length -->
+          <div class="setting">
+            <label for="characters">Characters</label>
+            <input type="number" id="length" min="8" max="128" value="8" />
+          </div>
+
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+      <!-- PAssword Settings End -->
+
     </div>
-    <script src="script.js"></script>
+
+    <!-- Java -->
+    <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
