@@ -7,6 +7,7 @@ var btn = document.getElementById("pop-up");
 var span = document.getElementsByClassName("close")[0];
 
 
+
 // click to open modal
 btn.onclick = function() {
   modal.style.display = "block";
@@ -54,6 +55,10 @@ const generatePassword = (length, characters) => {
       Math.floor(Math.random() * characters.length)
     );
   }
+  if (j==0)
+       {
+          alert("please select checkbox")
+       }
   return password;
 };
 
