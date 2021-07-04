@@ -2,9 +2,10 @@
 
 var modal = document.getElementById("Settings-Modal");
 // button that opens the modal
-var btn = document.getElementById("generate");
+var btn = document.getElementById("pop-up");
 // element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+
 
 // click to open modal
 btn.onclick = function() {
@@ -28,7 +29,7 @@ const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*_-+=";
 
-const passwordTxt = document.getElementById("password");
+const passwordTxt = document.getElementById("#password");
 const length = document.getElementById("length");
 const incLetters = document.getElementById("upper");
 const incletters = document.getElementById("lower");
@@ -37,6 +38,7 @@ const incSymbols = document.getElementById("symbols");
 const generateBtn = document.getElementById("#generate");
 
 generateBtn.addEventListener("click", () => {
+  let characters = undefined;
   incLetters.checked ? (characters += upper) : "";
   incletters.checked ? (characters += lower) : "";
   incNumbers.checked ? (characters += numbers) : "";
